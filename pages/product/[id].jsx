@@ -7,13 +7,12 @@ import Navigation from '@/components/Navigation';
 const ProductDetails = ({ product }) => {
   const { addItemToCart } = useCartContext(); 
   
-
   return (
     <>
       
       <div className={styles.productDetailsContainer}>
         <div className={styles.imageContainer}>
-          <img src={product.cover_medium} alt={product.title} height='100' width='100' className={styles.productImage} />
+          <img src={product.cover_medium } alt={product.title} height='100' width='100' className={styles.productImage} />
         </div>
         <div className={styles.detailsContainer}>
           <h1 className={styles.productName}>{product.title}</h1>
@@ -40,6 +39,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const res = await axios.get(`https://api.deezer.com/album/${params.id}`);
   const product = res.data;
+    //console.log(product)
   return {
     props: { product },
   };

@@ -9,20 +9,6 @@ export const ProductProvider = ({ children, initialProducts = [] }) => { // Defa
   const [cart, setCart] = useState([]);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    if (products.length === 0) {
-      const fetchProducts = async () => {
-        try {
-          const response = await axios.get('https://fakestoreapi.com/products');
-          setProducts(response.data);
-        } catch {
-          setError("Some error occurred while fetching products.");
-        }
-      };
-      fetchProducts();
-    }
-  }, [products]);
-
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
   };

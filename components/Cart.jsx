@@ -4,6 +4,7 @@ import styles from "@/styles/components/Cart.module.css";
 import { useRouter } from 'next/router';
 
 const Cart = () => {
+  console.log("i am in cart")
   const router = useRouter();
   const { cart, removeItemFromCart } = useCartContext(); // Use the context
 
@@ -14,20 +15,20 @@ const Cart = () => {
   const goToCheckout = () => {
     router.push('/checkout'); 
   };
-console.log(cart)
+console.log("cart prod",cart)
   const cards = cart.map((product, index) => (
     
     <div className={styles.cardContainer} key={index}>
       <div className={styles.card}>
         <div className={styles.imageContainer}>
           <img
-            src={product.album.cover_medium}
+            src={product.cover_medium}
             alt={product.title}
             className={styles.cardImage}
           />
         </div>
         <div className={styles.cardBody}>
-          <h5 className={styles.cardTitle}>{product.album.title}</h5>
+          <h5 className={styles.cardTitle}>{product.title}</h5>
           <h5 className={styles.cardTitle}>{product.artist.name}</h5>
           <p className={styles.cardText}>${Math.floor(Math.random() * 90) + 10}</p>
         </div>

@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   return (
     <AuthProvider>
       <ProductProvider initialProducts={pageProps.initialProducts}>
-        <CartProvider> {/* Wrap with CartProvider */}
+        <CartProvider>
           
           {showNav && <Navigation />}
           <Component {...pageProps} />
