@@ -1,0 +1,100 @@
+.productsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 20px 0;
+  }
+  
+  .cardContainer {
+    flex: 0 0 calc(25% - 30px);
+    margin: 15px;
+    max-width: 300px;
+    box-sizing: border-box;
+  
+    @media (max-width: 992px) {
+      flex: 0 0 calc(33.33% - 30px);
+    }
+  
+    @media (max-width: 768px) {
+      flex: 0 0 calc(50% - 30px);
+    }
+  
+    @media (max-width: 576px) {
+      flex: 0 0 100%;
+    }
+  }
+  
+  .card {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .cardImage {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .cardBody {
+    padding: 6px;
+  }
+  
+  .cardFooter {
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-around; /* Adjusted to space the buttons evenly */
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .buyButton, .learnMoreButton {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .learnMoreButton {
+    background-color: #007bff; /* Primary color for the Learn More button */
+  }
+  
+  .learnMoreButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .buyButton {
+    background-color: #28a745; /* Green color for Buy Now button */
+  }
+  
+  .buyButton:hover {
+    background-color: #218838; /* Darker shade on hover */
+  }
+  
+  .errorAlert {
+    color: red;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+    background-color: #f8d7da;
+  }
+  
+  .playButton {
+    background-color: green; /* Style your play button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  

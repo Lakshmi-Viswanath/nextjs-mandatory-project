@@ -1,0 +1,65 @@
+/* styles/ProductDetails.module.css */
+
+.productDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  gap: 20px;
+  background-color: #f9f9f9; /* Light background for the product details */
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imageContainer {
+  flex: 0 0 150px; /* Fixed width for the image */
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.detailsContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out title, description, and button */
+}
+
+.productName {
+  font-size: 1.5rem; /* Larger font size for product name */
+  margin: 0;
+  color: #333; /* Darker text color */
+}
+
+.productDescription {
+  font-size: 1rem;
+  color: #666; /* Grey color for description */
+  margin: 10px 0; /* Add spacing */
+}
+
+.productPrice {
+  font-size: 1.25rem; /* Slightly larger price text */
+  color: #28a745; /* Green color for the price */
+  font-weight: bold; /* Bold text */
+}
+
+.addToCartButton {
+  padding: 6px 10px; /* Smaller padding */
+  font-size: 0.875rem; /* Smaller font size */
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Slightly smaller border radius */
+  cursor: pointer;
+  transition: background-color 0.3s;
+  max-width: 120px; /* Optional: Set a max width for the button */
+}
+
+.addToCartButton:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+

@@ -1,0 +1,79 @@
+/* Login.module.css */
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formContainer {
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 300px;
+    color: #ffffff;
+}
+
+.formContainer h2 {
+    text-align: left;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #ffffff;
+    background-color: #1f1d1d;
+}
+
+.formGroup input::placeholder {
+    color: #ffffff;
+}
+
+.btn {
+    background-color: #38a169;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background-color: #6fdba2;
+}
+
+.signupLink {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signupLink a {
+    color: #38a169;
+    text-decoration: none;
+}
+
+.signupLink a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+/* styles/components/Footer.module.css */
+
+.footer {
+    background-color: #1a1a1a; /* Same background color as the navbar */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    padding: 15px 0; /* Add some padding */
+    position: relative; /* Ensure footer stays below content */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    font-size: 14px; /* Slightly smaller text */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 12px; /* Smaller text on mobile */
+    }
+}

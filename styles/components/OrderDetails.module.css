@@ -1,0 +1,38 @@
+.orderDetailsContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .orderDetailsContainer h2,
+  .orderDetailsContainer h3 {
+    margin-bottom: 10px;
+  }
+  
+  .sectionContainer {
+    display: flex;
+    gap: 20px; /* Space between sections */
+  }
+  
+  .section {
+    flex: 1; /* Each section takes up equal space */
+    margin-bottom: 20px;
+  }
+  
+  .orderTable {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  
+  .orderTable th,
+  .orderTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .total {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
