@@ -4,6 +4,8 @@ import { ProductProvider } from '@/pages/context/ProductContext';
 import { CartProvider } from '@/pages/context/CartContext'; 
 import Navigation from '@/components/Navigation';
 import { useRouter } from 'next/router';
+import {PlayNowProvider} from '@/pages/context/PlayNowContext';
+import PlayNow from '@/components/PlayNow';
 
 
 export default function App({ Component, pageProps }) {
@@ -16,9 +18,11 @@ export default function App({ Component, pageProps }) {
     <AuthProvider>
       <ProductProvider initialProducts={pageProps.initialProducts}>
         <CartProvider>
-          
+          <PlayNowProvider>
           {showNav && <Navigation />}
           <Component {...pageProps} />
+          <PlayNow />
+          </PlayNowProvider>
         </CartProvider>
       </ProductProvider>
     </AuthProvider>

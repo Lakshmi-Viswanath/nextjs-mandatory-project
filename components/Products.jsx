@@ -3,11 +3,13 @@ import { useProductContext } from '@/pages/context/ProductContext';
 import { useRouter } from 'next/router';
 import styles from '@/styles/components/Product.module.css';
 import { useCartContext } from '@/pages/context/CartContext';
-import Image from 'next/image'
+import { usePlayNowContext } from '@/pages/context/PlayNowContext';
 
 const Products = () => {
   
   const { products, addToCart } = useProductContext();
+  const { playTrack } = usePlayNowContext();
+
   const { addItemToCart } = useCartContext();
   const router = useRouter();
 
@@ -27,6 +29,12 @@ const Products = () => {
           <p className="text-center">Price: ${Math.floor(Math.random() * 90) + 10}</p>
         </div>
         <div className={styles.cardFooter}>
+        <button onClick={() => playTrack({
+            name: product.album.title,
+            artist: product.artist.name
+          })}>
+            Play Now
+          </button>
           <button className={styles.learnMoreButton} onClick={() => goToDetails(product.album.id)}>
             Learn More
           </button>

@@ -1,0 +1,34 @@
+/* styles/components/PlayNow.module.css */
+.playNowCard {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.playNowCard h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.playNowCard p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.controlButton {
+  background-color: #1db954;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: 100%;
+}
